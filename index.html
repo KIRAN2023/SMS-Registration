@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="index.js" defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Register</title>
+</head>
+
+<body>
+
+    <!-- ----------------------------------------REGISTRATION SECTION ----------------------------------------------------->
+
+    <div class="RegistrationDiv">
+        <div class="container">
+
+            <div class="header">
+                <h1>Registration</h1>
+            </div>
+
+            <form action="" class="form" id="form">
+                <div class="grid grid-two-columns">
+                    <div class="form_fields">
+                        <label>User Name</label>
+                        <input type="text" id="username" placeholder="Enter your name" required>
+                       
+                    </div>
+                    <div class="form_fields">
+                        <label>Email</label>
+                        <input type="email" id="mailid" placeholder="Enter your Mail ID" required>
+                        
+                    </div>
+                </div>
+
+                <div class="grid grid-two-columns">
+                    <div class="form_fields">
+                        <label>Mobile Number</label>
+                        <input type="number" id="mobilenumber" placeholder="Enter your Mobile Number">
+                       
+                    </div>
+                    <div class="form_fields">
+                        <label>Date Of Birth</label>
+                        <input type="date" name="DOB" id="DOB">
+                    </div>
+                </div>
+                <div class="grid grid-two-columns">
+                    <div class="form_fields controls">
+                        <label>Gender</label>
+
+                        <label class="radio"> <input type="radio" name="Gender" value="Male" id="Gender"> Male</label>
+
+                        <label class="radio"> <input type="radio" name="Gender" value="Female" id="Gender">
+                            Female</label>
+
+                    </div>
+                    <div class="form_fields">
+                        <label>City</label>
+                        <select name="city" id="city">
+                            <option value="none" selected disabled hidden>Choose City</option>
+                            <option value="Erode">Erode</option>
+                            <option value="Salem">Salem</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Chennai">Chennai</option>
+                        </select>
+                    </div>
+
+                </div>
+                
+                <div class="form_fields">
+                    <label>Address</label>
+                    <textarea name="Address" id="address" cols="15" rows="3"></textarea>
+                </div>
+
+                <div class="grid grid-two-columns">
+                    <div class="form_fields">
+                        <label>Password</label>
+                        <input type="password" id="password" class="passshow" placeholder="Enter Password" required>
+                        <i class="fa fa-eye" aria-hidden="true" onclick="showPassword()"></i>
+                    </div>
+                    <div class="form_fields">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirmpassword" class="passshow" placeholder="Enter Confirm Password" required>
+                        <i class="fa fa-eye" aria-hidden="true" onclick="showPassword()"></i>   
+                    </div>
+                </div>
+
+                <input type="button" value="Register" class="btn">
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

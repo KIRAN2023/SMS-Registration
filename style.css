@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+
+/*-- ----------------------------------------REUSABLE CODE SECTION -----------------------------------------------------*/
+
+:root {
+    --heading: rgb(0 10 45);
+    --para: #777;
+    --para-tint: #e4e4e4;
+    --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+
+    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.active {
+    color: var(--gradient);
+}
+
+
+
+/*-- ----------------------------------------HEADER SECTION -----------------------------------------------------*/
+
+
+body {
+    overflow-x: hidden;
+    background-color: var(--para-tint);
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+/*-- ----------------------------------------REGISTRATION SECTION -----------------------------------------------------*/
+.container {
+    background-color: var(--helper-tint);
+    margin-top: 2rem;
+    max-width: 80vw;
+    border-radius: 1rem;
+    box-shadow: var(--shadowSupport);
+    overflow: hidden;
+}
+
+.RegistrationDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .header {
+    background: var(--gradientSupport);
+    padding: 1.5rem 0;
+}
+
+.container .header h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+form {
+    padding: 1.5rem;
+}
+
+form .form_fields {
+    margin: 0.8rem 0;
+    position: relative;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+form input,
+textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.controls {
+    display: flex;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.btn {
+    background: var(--gradientSupport);
+    color: var(--helper-tint);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover,
+.btn:active {
+    box-shadow: var(--shadowSupport);
+    transition: all 0.3s ease;
+}
+
+
+/* ------------------------------------FORM VALIDTAION -------------------------------------------*/
+/* .form_fields.success input {
+    border-color: #00FF00;
+}
+
+.form_fields.error input {
+    border-color: #FF0000;
+}
+.form_fields.error i.fa-check-circle {
+    color: #00FF00;
+    visibility: visible;
+}
+.form_fields.error i.fa-exclamation-circle {
+    color: #FF0000;
+    visibility: visible;
+} */
+
+.form_fields i {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+}
+
+/* -------------------------------------------------RESPONSIVE ---------------------------------------------------------*/
+
+@media screen and (max-width:96rem) {
+    .container {
+        max-width: 70vw;
+    }
+}
+
+@media screen and (max-width:80rem) {
+    .container {
+        max-width: 80vw;
+    }
+
+    .grid-two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    form .form_fields {
+        margin: 0.3rem 0;
+    }
+
+    form input,
+    textarea {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 0.5;
+    }
+}
+@media screen and (max-width:80rem) {
+    .container {
+        min-width: 70vw;
+    }
+
+    form .form_fields {
+        margin: 0.3rem 0;  
+    }
+    form input,
+    textarea {
+        width: 100%;
+        font-size: 0.7rem;
+        padding: 0.4;
+    }
+    form {
+        padding: 0.6rem;
+    }
+}
